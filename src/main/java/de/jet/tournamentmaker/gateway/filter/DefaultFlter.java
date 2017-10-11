@@ -1,10 +1,8 @@
 package de.jet.tournamentmaker.gateway.filter;
 
-import org.springframework.stereotype.Component;
-
 import com.netflix.zuul.ZuulFilter;
 
-@Component
+//@Component
 public class DefaultFlter extends ZuulFilter
 {
 	@Override
