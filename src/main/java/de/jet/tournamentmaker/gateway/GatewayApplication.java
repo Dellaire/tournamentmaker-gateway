@@ -17,7 +17,8 @@ public class GatewayApplication
 		SpringApplication.run(GatewayApplication.class, args);
 	}
 
-	@Bean
+	// CORS is disabled, body of bean is kept for demonstration purposes
+	// @Bean
 	public CorsFilter corsFilter()
 	{
 		CorsConfiguration config = new CorsConfiguration();
