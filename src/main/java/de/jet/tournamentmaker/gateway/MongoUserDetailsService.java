@@ -26,6 +26,7 @@ public class MongoUserDetailsService implements UserDetailsService
 		this.userRepository = Objects.requireNonNull(userRepository);
 		this.objectMapper = Objects.requireNonNull(objectMapper);
 
+		this.userRepository.deleteAll();
 		String defaultUserString = new String(Files.readAllBytes(Paths.get("defaultUsers")));
 		TournamentUser defaultUser = this.objectMapper.readValue(defaultUserString, TournamentUser.class);
 		this.userRepository.save(defaultUser);
